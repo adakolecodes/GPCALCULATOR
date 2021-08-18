@@ -22,8 +22,14 @@ if(isset($_POST['submitbtn'])){
     $unit2 = trim($_POST['unit2']);
     $value1 = trim($_POST['value1']);
     $value2 = trim($_POST['value2']);
-    $total1 = trim($_POST['total1']);
-    $total2 = trim($_POST['total2']);
+    $unittotal = trim($_POST['unittotal']);
+
+    //Total Calculation (Course unit x Grade value) of each course
+    $total1 = $unit1 * $value1;
+    $total2 = $unit2 * $value2;
+
+    //Get grand total of total above
+    $grandtotal = $total1 + $total2;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,13 +52,13 @@ if(isset($_POST['submitbtn'])){
     <table class="table">
 
         <thead>
-            <tr>
+            <tr class="table-secondary">
                 <th scope="col">S/n</th>
                 <th scope="col">Course Title</th>
                 <th scope="col">Grade</th>
                 <th scope="col">Unit</th>
                 <th scope="col">Value</th>
-                <th scope="col">Total</th>
+                <th  scope="col">Total</th>
             </tr>
         </thead>
 
@@ -72,6 +78,14 @@ if(isset($_POST['submitbtn'])){
                 <td><?php echo $unit2 ?></td>
                 <td><?php echo $value2 ?></td>
                 <td><?php echo $total2 ?></td>
+            </tr>
+            <tr class="table-secondary">
+                <th scope="row">TOTAL</th>
+                <td></td>
+                <td></td>
+                <td><strong><?php echo $unittotal ?></strong></td>
+                <td></td>
+                <td><strong><?php echo $grandtotal ?></strong></td>
             </tr>
         </tbody>
     </table>
