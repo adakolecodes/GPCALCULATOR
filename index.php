@@ -13,7 +13,7 @@
         <h1>GP Calculator</h1>
     </div>
 
-    <form onsubmit="return add();">
+    <form action="compute.php">
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -41,17 +41,17 @@
                 </div>
                 <div class="col">
                     <div class="mb-3">
-                        <input type="number" class="form-control" placeholder="Enter Course Unit" id="unit1">
+                        <input type="number" class="form-control" placeholder="Enter Course Unit">
                     </div>
                 </div>
                 <div class="col">
                     <div class="mb-3">
-                        <input type="number" class="form-control" placeholder="Enter Grade Value" id="grade1">
+                        <input type="number" class="form-control" placeholder="Enter Grade Value">
                     </div>
                 </div>
                 <div class="col">
                     <div class="mb-3">
-                        <input type="number" class="form-control" placeholder="Total" id="Total1">
+                        <input type="number" class="form-control" placeholder="Total">
                     </div>
                 </div>
             </div>
@@ -83,17 +83,17 @@
                 </div>
                 <div class="col">
                     <div class="mb-3">
-                        <input type="number" class="form-control" placeholder="Enter Course Unit" id="unit2">
+                        <input type="number" class="form-control" placeholder="Enter Course Unit">
                     </div>
                 </div>
                 <div class="col">
                     <div class="mb-3">
-                        <input type="number" class="form-control" placeholder="Enter Grade Value" id="grade2">
+                        <input type="number" class="form-control" placeholder="Enter Grade Value">
                     </div>
                 </div>
                 <div class="col">
                     <div class="mb-3">
-                        <input type="number" class="form-control" placeholder="Total" id="Total2">
+                        <input type="number" class="form-control" placeholder="Total">
                     </div>
                 </div>
             </div>
@@ -107,28 +107,10 @@
                     </div>
                 </div>
             </div>
-            <input type="button" class="btn btn-primary" value="Calculate" onclick="add()">
+            <input type="button" class="btn btn-primary" value="Calculate">
         </div>
     </form>
 
-
-
-
-
-    <script>
-        function add () {
-            //We parse them as integers
-            var courseUnit = parseInt(document.getElementById("unit1").value);
-            var gradeValue = parseInt(document.getElementById("grade1").value);
-            
-            //addition
-            var gp = courseUnit + gradeValue;
-
-            //Output
-            document.getElementById("answer").value = gp;
-            return false; // Stop form submit
-        }
-    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 </body>
