@@ -16,7 +16,7 @@ session_start();
 
     <div class="container mt-3">
         <h1>GP Calculator</h1>
-        <p>Calculate your GP and download/print out result</p>
+        <p>Calculate your GP and download/print out result. Get started</p>
     </div>
 
     <!-- Start Get icons for warning alert -->
