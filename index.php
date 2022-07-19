@@ -1,5 +1,5 @@
 <?php
-//Start session for displaying warning message
+//Start session for displaying warning messages
 session_start();
 ?>
 <!DOCTYPE html>
